@@ -1,20 +1,11 @@
-function Checker(color, position) {
+function CheckerClass(color, position) {
 	this.color = color;
 	this.position = position;
 }
 
-function Board() {
-	this.grid = 
-	[ 
-	[],[],[],[],[],[],[],[],[]
-	[],[],[],[],[],[],[],[],[]
-	[],[],[],[],[],[],[],[],[]
-	[],[],[],[],[],[],[],[],[]
-	[],[],[],[],[],[],[],[],[]
-	[],[],[],[],[],[],[],[],[]
-	[],[],[],[],[],[],[],[],[]
-	[],[],[],[],[],[],[],[],[]
-	 ]
+function BoardClass() {
+	this.grid = [];
+
 
 	this.checkers = [ ]
 	this.createCheckers = function() {
@@ -28,6 +19,6 @@ function Board() {
 	this.placeCheckers = function() {
 		var checker1 = this.checkers[0]
 		var checkerPosition = checker1.position
-		this.grid[0][1] = checker1
+		this.grid[checkerPosition[0]][checkerPosition[1]] = checker1
 	}
 }
